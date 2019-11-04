@@ -21,7 +21,9 @@ export default {
   },
   methods: {
     itemClick(){
-      this.$router.replace(this.link)
+      if(this.$route.path != this.link){
+        this.$router.replace(this.link)
+      }
     }
   },
   computed:{
